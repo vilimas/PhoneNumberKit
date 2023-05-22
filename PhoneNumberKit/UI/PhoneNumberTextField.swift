@@ -321,7 +321,7 @@ open class PhoneNumberTextField: UITextField, UITextFieldDelegate {
         let ph = NSMutableAttributedString(string: example, attributes: [.font: font])
 
         #if compiler(>=5.1)
-        if #available(iOS 13.0, *), self.withPrefix {
+        if #available(iOS 13.0, *) {
             // because the textfield will automatically handle insert & removal of the international prefix we make the
             // prefix darker to indicate non default behaviour to users, this behaviour currently only happens on iOS 13
             // and above just because that is where we have access to label colors
